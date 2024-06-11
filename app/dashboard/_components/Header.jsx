@@ -7,10 +7,10 @@ import React, { useEffect } from 'react'
 const Header = () => {
   const cssListClass = "hover:text-primary hover:font-bold transition-all cursor-pointer"
   const path=usePathname();
+  
   useEffect(()=>{
     console.log(path);
   },[])
-
   
   return (
     <div className='flex p-4 justify-between bg-secondary shadow-sm'>
