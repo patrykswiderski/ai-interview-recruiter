@@ -17,6 +17,7 @@ import { v4 as uuidv4 } from 'uuid'
 import { db } from '../../../utils/db.js'
 import { useUser } from '@clerk/nextjs'
 import moment from 'moment'
+import { useRouter } from 'next/navigation'
 
 const AddNewInterview = () => {
   const [openDialog, setOpenDialog] = useState(false)
@@ -26,6 +27,7 @@ const AddNewInterview = () => {
   const [loading, setLoading] = useState(false)
   const [interviewQuestions, setInterviewQuestions] = useState([])
   const { user } = useUser()
+  const router = useRouter()
 
   const onSubmit = async (e) => {
     e.preventDefault()
@@ -60,6 +62,7 @@ const AddNewInterview = () => {
       console.log('insert ID:', resp)
       if (resp) {
         setOpenDialog(false)
+        router.push(`/dashboard/interview/${resp[0]?.airId}`)
       }
     } else {
       console.log('AirJsonResponse is empty')
