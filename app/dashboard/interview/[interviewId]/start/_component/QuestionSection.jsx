@@ -4,7 +4,7 @@ import React from 'react'
 function QuestionSection({ airInterviewQuestion, activeQuestionIndex }) {
   return (
     airInterviewQuestion && (
-      <div className="p-5 border rounded-lg my-10">
+      <div className="p-5 border rounded-lg my-2 md:my-10">
         <div className="grid grid-col-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
           {airInterviewQuestion &&
             airInterviewQuestion.map((question, index) => (

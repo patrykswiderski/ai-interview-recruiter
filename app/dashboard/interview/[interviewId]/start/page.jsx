@@ -29,7 +29,7 @@ function StartInterview({ params }) {
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:items-center md:gap-10">
         {/* {Questions} */}
         <QuestionSection
           airInterviewQuestion={airInterviewQuestion}
