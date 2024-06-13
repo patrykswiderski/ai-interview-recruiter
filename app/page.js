@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { Button } from '../components/ui/button'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -7,5 +7,5 @@ export default function Home() {
       <h1>Hello World!</h1>
       <Button>Sub</Button>
     </div>
-  );
+  )
 }
