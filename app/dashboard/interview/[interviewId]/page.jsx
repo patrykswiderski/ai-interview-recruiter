@@ -6,6 +6,7 @@ import { eq } from 'drizzle-orm'
 import Webcam from 'react-webcam'
 import { Lightbulb, WebcamIcon } from 'lucide-react'
 import { Button } from '../../../../components/ui/button'
+import Link from 'next/link'
 
 function Interview({ params }) {
   const [interviewData, setInterviewData] = useState()
@@ -27,9 +28,9 @@ function Interview({ params }) {
 
   return (
     <div className="my-6 flex flex-col justify-center items-center">
-      <h2 className="font-bold text-2xl lg:text-3xl ">Let's start!</h2>
+      <h2 className="font-bold text-2xl md:text-3xl ">Let's start!</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10">
         <div className="flex flex-col my-5 gap-5">
           <div className="flex flex-col p-5 rounded-lg border gap-5">
             <h2 className="text-lg">
@@ -46,7 +47,7 @@ function Interview({ params }) {
             </h2>
           </div>
 
-          <div className="p-5 border rounded-lg border-yellow-300 bg-yellow-100 text-yellow-500">
+          <div className="p-5 border rounded-lg border-yellow-300 bg-yellow-100 text-yellow-500 text-sm md:text-normal">
             <h2 className="flex gap-2 items-center">
               <Lightbulb />
               <strong>Information</strong>
@@ -55,7 +56,7 @@ function Interview({ params }) {
           </div>
         </div>
 
-        <div className="">
+        <div>
           {webCamEnabled ? (
             <Webcam
               onUserMedia={() => setWebCamEnabled(true)}
@@ -65,7 +66,7 @@ function Interview({ params }) {
             />
           ) : (
             <>
-              <WebcamIcon className="h-72 w-full p-20 my-7 rounded-lg border bg-secondary" />
+              <WebcamIcon className="h-72 w-full p-20 my-5 rounded-lg border bg-secondary" />
               <Button
                 variant="ghost"
                 className="w-full font-semibold text-neutral-500 border border-neutral-100"
@@ -77,10 +78,12 @@ function Interview({ params }) {
           )}
         </div>
       </div>
-      <div className="flex w-full justify-center lg:justify-end items-end pt-5 lg:pt-2">
-        <Button className="hover:scale-105 transition-all">
-          Start Interview
-        </Button>
+      <div className="flex w-full justify-center md:justify-end items-end pt-5 md:pt-2">
+        <Link href={`/dashboard/interview/${params.interviewId}/start`}>
+          <Button className="hover:scale-105 transition-all">
+            Start Interview
+          </Button>
+        </Link>
       </div>
     </div>
   )
