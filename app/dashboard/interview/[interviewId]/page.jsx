@@ -56,17 +56,33 @@ function Interview({ params }) {
           </div>
         </div>
 
-        <div>
+        <div className="flex flex-col justify-center items-center w-full">
           {webCamEnabled ? (
-            <Webcam
-              onUserMedia={() => setWebCamEnabled(true)}
-              onUserMediaError={() => setWebCamEnabled(false)}
-              mirrored={true}
-              style={{ height: 300, width: 300 }}
-            />
+            <>
+              <Webcam
+                onUserMedia={() => setWebCamEnabled(true)}
+                onUserMediaError={() => setWebCamEnabled(false)}
+                mirrored={true}
+                style={{
+                  height: 288,
+                  width: '100%',
+                  marginBottom: '1.25rem',
+                  borderRadius: '10px',
+                  border: 'rgb(229, 229, 229) solid 1px',
+                  background: 'rgb(245, 245, 245)',
+                }}
+              />
+              <Button
+                variant="ghost"
+                className="w-full font-semibold text-neutral-500 border border-neutral-00"
+                onClick={() => setWebCamEnabled(false)}
+              >
+                Enable Web Cam and Microphone
+              </Button>
+            </>
           ) : (
             <>
-              <WebcamIcon className="h-72 w-full p-20 my-5 rounded-lg border bg-secondary" />
+              <WebcamIcon className="h-72 w-full p-20 mb-5 rounded-lg border bg-secondary" />
               <Button
                 variant="ghost"
                 className="w-full font-semibold text-neutral-500 border border-neutral-100"
