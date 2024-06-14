@@ -37,7 +37,10 @@ function StartInterview({ params }) {
         />
 
         {/* {Video / Audio recording} */}
-        <RecordAnswerSection />
+        <RecordAnswerSection
+          airInterviewQuestion={airInterviewQuestion}
+          activeQuestionIndex={activeQuestionIndex}
+        />
       </div>
     </div>
   )
