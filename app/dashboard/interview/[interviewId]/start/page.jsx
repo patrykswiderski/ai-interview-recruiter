@@ -5,6 +5,8 @@ import { AiRecruiterInterview } from '../../../../../utils/schema'
 import { eq } from 'drizzle-orm'
 import QuestionSection from './_component/QuestionSection'
 import RecordAnswerSection from './_component/RecordAnswerSection'
+import { Button } from '../../../../../components/ui/button'
+import Link from 'next/link'
 
 function StartInterview({ params }) {
   const [interviewData, setInterviewData] = useState()
@@ -40,7 +42,31 @@ function StartInterview({ params }) {
         <RecordAnswerSection
           airInterviewQuestion={airInterviewQuestion}
           activeQuestionIndex={activeQuestionIndex}
+          interviewData={interviewData}
         />
+      </div>
+      <div className="flex justify-end gap-6">
+        {activeQuestionIndex > 0 && (
+          <Button
+            onClick={() => setActiveQuestionIndex(activeQuestionIndex - 1)}
+          >
+            Previous question
+          </Button>
+        )}
+        {activeQuestionIndex != airInterviewQuestion?.length - 1 && (
+          <Button
+            onClick={() => setActiveQuestionIndex(activeQuestionIndex + 1)}
+          >
+            Next question
+          </Button>
+        )}
+        {activeQuestionIndex == airInterviewQuestion?.length - 1 && (
+          <Link
+            href={'/dashboard/interview/' + interviewData?.ariId + '/feedback'}
+          >
+            <Button>End Interview</Button>
+          </Link>
+        )}
       </div>
     </div>
   )
