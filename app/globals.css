@@ -76,8 +76,8 @@
 }
 
 .pulse {
-  background: red;
-  color: white;
+  /* background: red;
+  color: white; */
   animation: pulse-animation 1.5s infinite;
 }
 
