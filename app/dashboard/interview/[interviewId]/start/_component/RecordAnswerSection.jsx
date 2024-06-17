@@ -103,7 +103,7 @@ function RecordAnswerSection({
         userAnswer: userAnswer,
         correctAnswer: airInterviewQuestion[activeQuestionIndex]?.answer,
         feedback: JsonFeedbackResponse.feedback,
-        rating: JsonFeedbackResponse.rating,
+        rating: Number(JsonFeedbackResponse.rating),
         userEmail: user?.primaryEmailAddress?.emailAddress,
         createdAt: moment().format('DD/MM/YYYY HH:mm'),
       })
