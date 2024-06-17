@@ -61,64 +61,74 @@ function Feedback({ params }) {
 
   return (
     <div className="md:p-10 ">
-      <h2 className="text-3xl font-bold text-green-600">Congratulation!</h2>
-      <h2 className="font-bold text-2xl">Here is your interview feedback</h2>
-      <h2 className="text-lg my-3">
-        Your overall interview rating: <strong>{overallRating}/10</strong>
-      </h2>
+      {feedbackList?.length == 0 ? (
+        <h2 className="font-bold text-xl mt-5">
+          No interview feedback record found
+        </h2>
+      ) : (
+        <>
+          <h2 className="text-3xl font-bold text-green-600">Congratulation!</h2>
+          <h2 className="font-bold text-2xl">
+            Here is your interview feedback
+          </h2>
+          <h2 className="text-lg my-3">
+            Your overall interview rating: <strong>{overallRating}/10</strong>
+          </h2>
 
-      <h2 className="text-sm text-neutral-500">
-        Find below interview question with correct answer, Your answer and
-        feedback to improvement
-      </h2>
-      {filteredFeedbackList &&
-        filteredFeedbackList.map((item, index) => (
-          <Collapsible
-            key={index}
-            className="mt-7 border border-neutral-300 rounded-lg"
-          >
-            <CollapsibleTrigger className="p-2 flex justify-between gap-6 bg-secondary rounded-lg text-left w-full">
-              {index + 1 + '. ' + item.question}{' '}
-              <ChevronsUpDown className="w-10 h-10 md:h-5 md:w-5" />
-            </CollapsibleTrigger>
-            <CollapsibleContent className="mx-2 mb-2 md:mx-5">
-              <div className="flex flex-col gap-2">
-                <h2
-                  className={`p-2 mt-2 text-center md:text-left text-sm rounded-lg ${
-                    item.rating < 4
-                      ? 'text-red-700 bg-red-50'
-                      : item.rating <= 6
-                        ? 'text-yellow-800 bg-orange-50'
-                        : 'text-green-800 bg-green-50'
-                  }`}
-                >
-                  <strong>Rating: </strong>
-                  {item.rating}/10
-                </h2>
-                <h2
-                  className={`text-sm p-2  rounded-lg ${
-                    item.rating < 4
-                      ? 'text-red-700 bg-red-50'
-                      : item.rating <= 6
-                        ? 'text-yellow-800 bg-orange-50'
-                        : 'text-green-800 bg-green-50'
-                  }`}
-                >
-                  <strong>Your answer: </strong>
-                  {item.userAnswer}
-                </h2>
-                <h2 className="bg-green-50 text-sm p-2  rounded-lg text-green-900">
-                  <strong>Correct answer: </strong>
-                  {item.correctAnswer}
-                </h2>
-                <h2 className="bg-blue-50 text-sm p-2  rounded-lg text-blue-800 md:mb-2">
-                  <strong>Feedback: </strong>
-                  {item.feedback}
-                </h2>
-              </div>
-            </CollapsibleContent>
-          </Collapsible>
-        ))}
+          <h2 className="text-sm text-neutral-500">
+            Find below interview question with correct answer, Your answer and
+            feedback to improvement
+          </h2>
+          {filteredFeedbackList &&
+            filteredFeedbackList.map((item, index) => (
+              <Collapsible
+                key={index}
+                className="mt-7 border border-neutral-300 rounded-lg"
+              >
+                <CollapsibleTrigger className="p-2 flex justify-between gap-6 bg-secondary rounded-lg text-left w-full">
+                  {index + 1 + '. ' + item.question}{' '}
+                  <ChevronsUpDown className="w-10 h-10 md:h-5 md:w-5" />
+                </CollapsibleTrigger>
+                <CollapsibleContent className="mx-2 mb-2 md:mx-5">
+                  <div className="flex flex-col gap-2">
+                    <h2
+                      className={`p-2 mt-2 text-center md:text-left text-sm rounded-lg ${
+                        item.rating < 4
+                          ? 'text-red-700 bg-red-50'
+                          : item.rating <= 6
+                            ? 'text-yellow-800 bg-orange-50'
+                            : 'text-green-800 bg-green-50'
+                      }`}
+                    >
+                      <strong>Rating: </strong>
+                      {item.rating}/10
+                    </h2>
+                    <h2
+                      className={`text-sm p-2  rounded-lg ${
+                        item.rating < 4
+                          ? 'text-red-700 bg-red-50'
+                          : item.rating <= 6
+                            ? 'text-yellow-800 bg-orange-50'
+                            : 'text-green-800 bg-green-50'
+                      }`}
+                    >
+                      <strong>Your answer: </strong>
+                      {item.userAnswer}
+                    </h2>
+                    <h2 className="bg-green-50 text-sm p-2  rounded-lg text-green-900">
+                      <strong>Correct answer: </strong>
+                      {item.correctAnswer}
+                    </h2>
+                    <h2 className="bg-blue-50 text-sm p-2  rounded-lg text-blue-800 md:mb-2">
+                      <strong>Feedback: </strong>
+                      {item.feedback}
+                    </h2>
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
+            ))}
+        </>
+      )}
       <div className="flex justify-end mt-5">
         <Button onClick={() => router.replace('/dashboard')}>Go Home</Button>
       </div>

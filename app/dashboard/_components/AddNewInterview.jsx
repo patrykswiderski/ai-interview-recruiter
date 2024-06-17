@@ -41,8 +41,6 @@ const AddNewInterview = () => {
       .replace('```json', '')
       .replace('```', '')
 
-    console.log(JSON.parse(AirJsonResponse))
-
     setInterviewQuestions(AirJsonResponse)
 
     if (AirJsonResponse) {
@@ -54,7 +52,7 @@ const AddNewInterview = () => {
           jobPosition: jobPosition,
           jobDesc: jobDescription,
           jobExperience: jobExperience,
-          createdBy: user,
+          createdBy: user?.primaryEmailAddress?.emailAddress,
           createdAt: moment().format('DD/MM/YYYY HH:mm'),
         })
         .returning({ airId: AiRecruiterInterview.ariId })
