@@ -95,7 +95,7 @@ const AddNewInterview = () => {
                   <div className="mt-7 my-3">
                     <label>Job position or role</label>
                     <Input
-                      placeholder="e.g. Software Engineer"
+                      placeholder="e.g. Software Engineer, Mechanical Engineer...."
                       required
                       onChange={(e) => setJobPosition(e.target.value)}
                     />
@@ -104,7 +104,7 @@ const AddNewInterview = () => {
                   <div className="mt-2 my-3">
                     <label>Job description or tech stack</label>
                     <Textarea
-                      placeholder="e.g. React, Node, Python"
+                      placeholder="e.g. React, JavaScript, Python, AutoCad...."
                       required
                       onChange={(e) => setJobDescription(e.target.value)}
                     />
