@@ -36,6 +36,7 @@ function StartInterview({ params }) {
         <QuestionSection
           airInterviewQuestion={airInterviewQuestion}
           activeQuestionIndex={activeQuestionIndex}
+          setActiveQuestionIndex={setActiveQuestionIndex}
         />
 
         {/* {Video / Audio recording} */}

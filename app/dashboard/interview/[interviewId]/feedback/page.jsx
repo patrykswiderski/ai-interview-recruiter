@@ -26,7 +26,7 @@ function Feedback({ params }) {
       .from(UserAnswer)
       .where(eq(UserAnswer.airIdRef, params.interviewId))
       .orderBy(UserAnswer.id)
-    console.log(result)
+    // console.log(result)
     setFeedbackList(result)
   }
 
@@ -53,7 +53,7 @@ function Feedback({ params }) {
       (sum, item) => sum + Number(item.rating),
       0,
     )
-    console.log(totalRating)
+    // console.log(totalRating)
     return (totalRating / filteredFeedbackList.length).toFixed(1)
   }
 

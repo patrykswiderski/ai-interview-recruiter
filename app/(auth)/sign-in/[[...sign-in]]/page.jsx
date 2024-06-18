@@ -1,4 +1,4 @@
-import { SignIn } from "@clerk/nextjs";
+import { SignIn } from '@clerk/nextjs'
 
 export default function Page() {
   return (
@@ -12,11 +12,9 @@ export default function Page() {
           />
         </aside>
 
-        <main
-          className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6"
-        >
+        <main className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
           <div className="max-w-xl lg:max-w-3xl">
-            <a className="block text-blue-600" href="#">
+            <a className="block text-primary" href="#">
               <span className="sr-only">Home</span>
               <svg
                 className="h-8 sm:h-10"
@@ -32,17 +30,16 @@ export default function Page() {
             </a>
 
             <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-            Welcome to the AI ​​Recruitment Interview 
+              Welcome to the AI ​​Recruitment Interview
             </h1>
 
             <p className="mt-4 leading-relaxed text-gray-500">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam dolorum aliquam,
-              quibusdam aperiam voluptatum.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              nam dolorum aliquam, quibusdam aperiam voluptatum.
             </p>
             <div className="flex items-center justify-center mt-6">
               <SignIn />
             </div>
-          
           </div>
         </main>
       </div>

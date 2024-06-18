@@ -1,7 +1,11 @@
 import { Lightbulb, Volume2 } from 'lucide-react'
-import React from 'react'
+import React, { useState } from 'react'
 
-function QuestionSection({ airInterviewQuestion, activeQuestionIndex }) {
+function QuestionSection({
+  airInterviewQuestion,
+  activeQuestionIndex,
+  setActiveQuestionIndex,
+}) {
   const textToSpeech = (text) => {
     if ('speechSynthesis' in window) {
       const speech = new SpeechSynthesisUtterance(text)
@@ -25,6 +29,7 @@ function QuestionSection({ airInterviewQuestion, activeQuestionIndex }) {
                     : 'bg-secondary'
                 }`}
                 key={index}
+                onClick={() => setActiveQuestionIndex(index)}
               >
                 Question #{index + 1}
               </h2>

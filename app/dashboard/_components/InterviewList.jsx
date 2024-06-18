@@ -25,7 +25,7 @@ function InterviewList() {
         .where(eq(AiRecruiterInterview.createdBy, emailAddress))
 
       setInterviewList(result)
-      console.log(result)
+      // console.log(result)
     } catch (error) {
       console.error('Error fetching interviews:', error)
     } finally {
