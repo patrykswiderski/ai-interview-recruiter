@@ -29,20 +29,20 @@ function Interview({ params }) {
   return (
     <div className="h-min-content md:h-screen">
       <div className="my-6 flex flex-col justify-center items-center">
-        <h2 className="font-bold text-xl md:text-3xl ">Let's start!</h2>
+        <h2 className="font-bold text-2xl lg:text-3xl ">Let's start!</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10">
           <div className="flex flex-col my-2 lg:my-5 gap-5">
             <div className="flex flex-col p-2 md:p-5 rounded-lg border gap-5">
-              <h2 className="md:text-lg">
+              <h2 className=" text-sm xl:text-lg">
                 <strong>Job position or role: </strong>
                 {interviewData?.jobPosition}
               </h2>
-              <h2 className="md:text-lg">
+              <h2 className="text-sm xl:text-lg">
                 <strong>Job description or tech stack: </strong>
                 {interviewData?.jobDesc}
               </h2>
-              <h2 className="md:text-lg">
+              <h2 className="text-sm xl:text-lg">
                 <strong>Job years of experience: </strong>
                 {interviewData?.jobExperience}
               </h2>
@@ -50,10 +50,12 @@ function Interview({ params }) {
 
             <div className="p-2 md:p-5 border rounded-lg border-yellow-300 bg-yellow-100 text-yellow-500 text-xs md:text-normal">
               <h2 className="flex gap-2 items-center">
-                <Lightbulb />
+                <Lightbulb className="hidden lg:block" />
                 <strong>Information</strong>
               </h2>
-              <h2 className="mt-3">{process.env.NEXT_PUBLIC_INFORMATION}</h2>
+              <h2 className="mt-3 text-xs lg:text-sm">
+                {process.env.NEXT_PUBLIC_INFORMATION}
+              </h2>
             </div>
           </div>
 
