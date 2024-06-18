@@ -19,9 +19,9 @@ function How() {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="lucide lucide-atom h-8 w-8"
           >
             <circle cx="12" cy="12" r="1"></circle>
@@ -37,7 +37,7 @@ function How() {
           </p>
         </a>
         <a
-          class="block rounded-xl border bg-white border-gray-200 p-8 shadow-xl transition hover:border-violet-500/10 hover:shadow-violet-500/10"
+          className="block rounded-xl border bg-white border-gray-200 p-8 shadow-xl transition hover:border-violet-500/10 hover:shadow-violet-500/10"
           href="#"
         >
           <svg
@@ -47,9 +47,9 @@ function How() {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="lucide lucide-square-pen h-8 w-8"
           >
             <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
@@ -72,9 +72,9 @@ function How() {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="lucide lucide-share2 h-8 w-8"
           >
             <circle cx="18" cy="5" r="3"></circle>
