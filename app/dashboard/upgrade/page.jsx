@@ -24,7 +24,7 @@ function Upgrade() {
               <div className="text-center">
                 <h2 className="md:text-lg  font-medium text-gray-900">
                   {item.duration}
-                  <span className="sr-only">Plan</span>
+                  <span> Plan</span>
                 </h2>
 
                 <p className="mt-2 sm:mt-4">
@@ -33,7 +33,7 @@ function Upgrade() {
                   </strong>
 
                   <span className="text-sm font-medium text-gray-700">
-                    /{item.duration}
+                    {item.durationPer}
                   </span>
                 </p>
               </div>

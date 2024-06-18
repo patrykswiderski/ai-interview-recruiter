@@ -27,7 +27,7 @@ function Interview({ params }) {
   }
 
   return (
-    <div className="h-screen">
+    <div className="h-min-screen md:h-screen">
       <div className="my-6 flex flex-col justify-center items-center">
         <h2 className="font-bold text-2xl md:text-3xl ">Let's start!</h2>
 
