@@ -8,24 +8,24 @@ function Hero() {
       <div className="mx-auto max-w-screen-xl px-4 py-20 md:py-32 lg:flex md:h-[50vh] md:items-center">
         <div className="mx-auto max-w-4xl text-center flex flex-col items-center justify-center">
           <h1 className="text-3xl font-extrabold sm:text-5xl">
-            Your Personal AI Interview Recruiter.
+            Your Personal AI Interview Recruiter
           </h1>
 
           <p className="mt-4 sm:text-xl/relaxed">
             Double your chances of landing that job offer with our AI-powered
-            interview prep
+            interview recruiter
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
-              className="w-full rounded bg-primary px-8 py-3 text-sm font-medium text-white shadow hover:scale-105 focus:outline-none focus:ring sm:w-auto flex items-center gap-3"
+              className="w-full rounded bg-primary px-8 py-3 text-sm font-medium text-white shadow hover:scale-105 focus:outline-none focus:ring sm:w-auto flex items-center justify-center gap-3"
               href="/dashboard"
             >
               Get Started <ArrowRight />
             </a>
 
             <a
-              className="flex items-center gap-3 w-full rounded px-8 py-3 text-sm font-medium text-primary shadow hover:scale-105 focus:outline-none focus:ring sm:w-auto"
+              className="flex items-center justify-center gap-3 w-full rounded px-8 py-3 text-sm font-medium text-primary shadow hover:scale-105 focus:outline-none focus:ring sm:w-auto"
               href="#"
             >
               <BsCameraVideoFill /> Watch video
