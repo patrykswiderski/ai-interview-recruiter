@@ -18,7 +18,7 @@ function QuestionSection({
 
   return (
     airInterviewQuestion && (
-      <div className="p-5 border rounded-lg my-2 lg:my-10 ">
+      <div className="p-3 xl:p-5 border rounded-lg my-2 lg:my-10 ">
         <div className="grid grid-cols-2 xl:grid-cols-4 gap-2 xl:gap-5">
           {airInterviewQuestion &&
             airInterviewQuestion.map((question, index) => (
@@ -35,16 +35,16 @@ function QuestionSection({
               </h2>
             ))}
         </div>
-        <h2 className="my-5 text-sm md:text-normal xl:text-lg ">
+        <h2 className="my-2 xl:my-5 text-sm md:text-normal xl:text-lg ">
           {airInterviewQuestion[activeQuestionIndex]?.question}
         </h2>
         <Volume2
-          className="cursor-pointer hover:scale-110 transition-all"
+          className="h-5 lg:h-10 cursor-pointer hover:scale-110 transition-all"
           onClick={() =>
             textToSpeech(airInterviewQuestion[activeQuestionIndex]?.question)
           }
         />
-        <div className="p-2 md:p-5 border rounded-lg bg-pink-100 text-pink-800 text-xs md:text-normal mt-5 xl:mt-20">
+        <div className="p-2 md:p-5 border rounded-lg bg-pink-100 text-pink-800 text-xs md:text-normal mt-2 xl:mt-20">
           <h2 className="flex gap-2 items-center">
             <Lightbulb className="hidden xl:block" />
             <strong>Note</strong>

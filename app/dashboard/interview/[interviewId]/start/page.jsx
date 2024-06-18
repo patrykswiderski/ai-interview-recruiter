@@ -46,11 +46,11 @@ function StartInterview({ params }) {
           interviewData={interviewData}
         />
       </div>
-      <div className="mt-10 lg:mt-0 flex justify-center md:justify-end gap-6 ">
+      <div className="mt-5 xl:mt-0 flex justify-center lg:justify-end gap-6 ">
         {activeQuestionIndex > 0 && (
           <Button
             onClick={() => setActiveQuestionIndex(activeQuestionIndex - 1)}
-            className="hover:scale-105 transition-all"
+            className="hover:scale-105 hover:bg-pink-200 transition-all"
           >
             Previous question
           </Button>
@@ -58,7 +58,7 @@ function StartInterview({ params }) {
         {activeQuestionIndex != airInterviewQuestion?.length - 1 && (
           <Button
             onClick={() => setActiveQuestionIndex(activeQuestionIndex + 1)}
-            className="hover:scale-105 transition-all"
+            className="hover:scale-105  hover:bg-pink-200 transition-all"
           >
             Next question
           </Button>
@@ -67,7 +67,7 @@ function StartInterview({ params }) {
           <Link
             href={'/dashboard/interview/' + interviewData?.ariId + '/feedback'}
           >
-            <Button className="hover:scale-105 transition-all">
+            <Button className="hover:scale-105 hover:bg-red-600 transition-all">
               End Interview
             </Button>
           </Link>
