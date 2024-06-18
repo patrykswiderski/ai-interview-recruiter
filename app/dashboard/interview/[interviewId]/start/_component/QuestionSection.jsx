@@ -18,8 +18,8 @@ function QuestionSection({
 
   return (
     airInterviewQuestion && (
-      <div className="p-5 border rounded-lg my-2 md:my-10">
-        <div className="grid grid-col-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
+      <div className="p-5 border rounded-lg my-2 lg:my-10 ">
+        <div className="grid grid-cols-2 xl:grid-cols-4 gap-2 lg:gap-5">
           {airInterviewQuestion &&
             airInterviewQuestion.map((question, index) => (
               <h2
@@ -35,7 +35,7 @@ function QuestionSection({
               </h2>
             ))}
         </div>
-        <h2 className="my-5 text-md md:text-lg">
+        <h2 className="my-5 text-sm md:text-md lg:text-lg">
           {airInterviewQuestion[activeQuestionIndex]?.question}
         </h2>
         <Volume2
@@ -44,7 +44,7 @@ function QuestionSection({
             textToSpeech(airInterviewQuestion[activeQuestionIndex]?.question)
           }
         />
-        <div className="p-5 border rounded-lg bg-pink-100 text-pink-800 text-sm md:text-normal mt-5 md:mt-20">
+        <div className="p-2 md:p-5 border rounded-lg bg-pink-100 text-pink-800 text-xs md:text-normal mt-5 xl:mt-20">
           <h2 className="flex gap-2 items-center">
             <Lightbulb />
             <strong>Note</strong>

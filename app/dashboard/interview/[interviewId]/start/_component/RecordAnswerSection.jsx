@@ -124,7 +124,7 @@ function RecordAnswerSection({
   }
 
   return (
-    <div className="flex flex-col items-center justify-center ">
+    <div className="flex flex-col items-center justify-center">
       <div className="flex flex-col my-2 md:my-5 justify-center items-center rounded-lg p-5 bg-black w-full">
         <Image src={WebCamImg} width={200} height={200} className="absolute" />
         <Webcam

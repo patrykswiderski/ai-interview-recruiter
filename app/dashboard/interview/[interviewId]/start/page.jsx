@@ -30,8 +30,8 @@ function StartInterview({ params }) {
   }
 
   return (
-    <div className="h-min-screen md:h-screen">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 md:items-center md:gap-10">
+    <div className="h-min-content md:h-screen">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 md:items-center lg:gap-10">
         {/* {Questions} */}
         <QuestionSection
           airInterviewQuestion={airInterviewQuestion}
