@@ -7,7 +7,7 @@ function Upgrade() {
   const { user } = useUser()
 
   return (
-    <div className="p-10">
+    <div className="p-10 h-screen">
       <div className="flex flex-col justify-center items-center">
         <h2 className="text-2xl font-bold">Upgrade</h2>
         <p className="text-neutral-600 text-sm text-center mt-2">

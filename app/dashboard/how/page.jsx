@@ -2,7 +2,7 @@ import React from 'react'
 
 function How() {
   return (
-    <section className="py-8 bg-white z-50 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+    <section className="py-8 bg-white z-50 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12 h-screen">
       <h2 className="font-bold text-3xl">How it Works?</h2>
       <h2 className="text-md text-gray-500 mt-3">
         Give AI interview in just 3 simply easy step

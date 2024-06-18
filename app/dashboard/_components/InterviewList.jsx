@@ -34,7 +34,7 @@ function InterviewList() {
   }
 
   return (
-    <div>
+    <div className="h-screen">
       <h2 className="font-md text-lg font-semibold">
         Previous AI Recruiter Interview
       </h2>
