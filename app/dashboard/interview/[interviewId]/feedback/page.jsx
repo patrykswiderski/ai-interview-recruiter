@@ -60,7 +60,7 @@ function Feedback({ params }) {
   const overallRating = calculateOverallRating(filteredFeedbackList)
 
   return (
-    <div className="md:p-10 ">
+    <div className="md:p-10 h-min-screen md:h-screen">
       {feedbackList?.length == 0 ? (
         <h2 className="font-bold text-xl mt-5">
           No interview feedback record found

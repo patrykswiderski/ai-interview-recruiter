@@ -30,8 +30,8 @@ function StartInterview({ params }) {
   }
 
   return (
-    <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:items-center md:gap-10">
+    <div className="h-min-screen md:h-screen">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 md:items-center md:gap-10">
         {/* {Questions} */}
         <QuestionSection
           airInterviewQuestion={airInterviewQuestion}
@@ -46,10 +46,11 @@ function StartInterview({ params }) {
           interviewData={interviewData}
         />
       </div>
-      <div className="flex justify-end gap-6">
+      <div className="mt-10 lg:mt-0 flex justify-center md:justify-end gap-6 ">
         {activeQuestionIndex > 0 && (
           <Button
             onClick={() => setActiveQuestionIndex(activeQuestionIndex - 1)}
+            className="hover:scale-105 transition-all"
           >
             Previous question
           </Button>
@@ -57,6 +58,7 @@ function StartInterview({ params }) {
         {activeQuestionIndex != airInterviewQuestion?.length - 1 && (
           <Button
             onClick={() => setActiveQuestionIndex(activeQuestionIndex + 1)}
+            className="hover:scale-105 transition-all"
           >
             Next question
           </Button>
@@ -65,7 +67,9 @@ function StartInterview({ params }) {
           <Link
             href={'/dashboard/interview/' + interviewData?.ariId + '/feedback'}
           >
-            <Button>End Interview</Button>
+            <Button className="hover:scale-105 transition-all">
+              End Interview
+            </Button>
           </Link>
         )}
       </div>

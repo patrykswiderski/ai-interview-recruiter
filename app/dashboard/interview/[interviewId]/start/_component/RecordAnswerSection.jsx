@@ -134,7 +134,7 @@ function RecordAnswerSection({
       </div>
       <Button
         disabled={loading || !hasPermission}
-        className={`bg-white text-red-600 border border-red-600 hover:text-white hover:bg-red-600 transition-all flex gap-2 items-center justify-center ${isRecording ? 'pulse' : ''}`}
+        className={`mt-2 md:mt-0 bg-white text-red-600 border border-red-600 hover:text-white hover:bg-red-600 transition-all flex gap-2 items-center justify-center ${isRecording ? 'pulse' : ''}`}
         onClick={StartStopRecording}
       >
         {isRecording ? (

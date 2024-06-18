@@ -69,7 +69,7 @@ const AddNewInterview = () => {
   }
 
   return (
-    <div>
+    <div className="h-screen">
       <div
         className="p-10 rounded-lg bg-secondary hover:scale-105 hover:shadow-md transition-all cursor-pointer"
         onClick={() => setOpenDialog(true)}
