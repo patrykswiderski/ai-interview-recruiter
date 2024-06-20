@@ -1,3 +1,4 @@
+import { SignInButton } from '@clerk/nextjs'
 import { ArrowRight } from 'lucide-react'
 import React from 'react'
 import { BsCameraVideoFill } from 'react-icons/bs'
@@ -17,12 +18,14 @@ function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a
-              className="w-full rounded bg-primary px-8 py-3 text-sm font-medium text-white shadow hover:scale-105 focus:outline-none focus:ring sm:w-auto flex items-center justify-center gap-3"
-              href="/dashboard"
-            >
-              Get Started <ArrowRight />
-            </a>
+            <SignInButton>
+              <a
+                className="w-full rounded bg-primary px-8 py-3 text-sm font-medium text-white shadow hover:scale-105 focus:outline-none focus:ring sm:w-auto flex items-center justify-center gap-3"
+                href="/dashboard"
+              >
+                Get Started
+              </a>
+            </SignInButton>
 
             <a
               className="flex items-center justify-center gap-3 w-full rounded px-8 py-3 text-sm font-medium text-primary shadow hover:scale-105 focus:outline-none focus:ring sm:w-auto"
