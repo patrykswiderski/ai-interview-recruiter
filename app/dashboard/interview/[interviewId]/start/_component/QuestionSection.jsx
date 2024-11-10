@@ -23,7 +23,7 @@ function QuestionSection({
           {airInterviewQuestion &&
             airInterviewQuestion.map((question, index) => (
               <h2
-                className={`p-2 rounded-full text-xs md:text-sm text-center cursor-pointer hover:scale-105 transition-all ${
+                className={`p-2 rounded-full text-xs md:text-sm text-center cursor-pointer hover:scale-105 transition-all text-nowrap${
                   activeQuestionIndex === index
                     ? 'bg-primary text-white font-light'
                     : 'bg-secondary'
